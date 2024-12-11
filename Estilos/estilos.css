@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap');
 
-/*3F613E 6A8E7F FFE787 C5D5AC EBF8B8*/
+/*273526 45624E 6D8777 C0CFB2 E4E6D9*/
 /*1 rem = 16px por defecto*/
 
 *{ /*Reset CSS*/
@@ -21,9 +21,11 @@ a:hover, a:focus{
 
 body{
     font-family: "Hind Mysuru", sans-serif;
-    background-color: black;
+    background-color: #E4E6D9;
 }
 
+
+/*Estilo de Nav*/
 nav{
     max-width: 1200px;
     margin: auto;
@@ -38,6 +40,14 @@ nav{
 
 .nav-logo{
     max-width: 100px;
+    display: flex;
+    align-items: center;
+    gap: .50rem;
+}
+
+.logo-name{
+    font-size: 1.5rem;
+    color: #273526;
 }
 
 .nav-links{
@@ -50,7 +60,7 @@ nav{
 .link a{
     position: relative;
     padding-bottom: 0.75rem;
-    color: #ffffff;
+    color: #273526;
 }
 
 .link a::after{
@@ -60,10 +70,98 @@ nav{
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #273526;
     transition: all 0.3s ease;
 }
 
 .link a:hover::after{
     width: 100%;
+}
+
+.btn{
+    padding: .75rem 1.75rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #273526;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #6D8777;
+}
+
+.buttons{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #273526;
+    z-index: -100;
+}
+
+
+/*Estilo de la parte de header*/
+header{
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #45624E;
+    font-size: 1.5rem;
+    font-weight: 600px;
+}
+
+header .content p{
+    margin-bottom: 2rem;
+    color: #45624E;
+}
+
+header .content h1{
+    color: #273526;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content h1 span{
+    -webkit-text-fill-color: transparent; /*relleno transparente para el texto*/
+    -webkit-text-stroke: 1.25px #273526; /*Borde verde*/
+}
+
+header .image{
+    position: relative;
+}
+
+header .image::before{
+    content: "green";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /*Para el contenido (content)*/
+    font-size: 30rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #273526;
+    opacity: 0.1;
+    z-index: -100;
 }
