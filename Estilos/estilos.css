@@ -115,10 +115,17 @@ nav{
 header{
     position: relative;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: grid; /*A todo elemento al que agregue un grid, genera una tabla invisible*/
+    /*
+    +---+---+
+    | 1 | 2 |
+    +---+---+
+    | 3 | 4 |
+    +---+---+
+    */
+    grid-template-columns: repeat(2,1fr);/*Esto divide la rejilla en 2 columnas iguales. 1fr significa "1 fracción del espacio disponible*/
     align-items: center;
-    gap: 2rem;
+    gap: 2rem; /*definimos el espacio entre filas y columnas*/
 }
 
 header .content h4{
@@ -164,4 +171,9 @@ header .image::before{
     color: #273526;
     opacity: 0.1;
     z-index: -100;
+}
+
+header .image img{
+    max-width: 600px;
+    margin: auto;
 }
