@@ -177,3 +177,38 @@ header .image img{
     max-width: 600px;
     margin: auto;
 }
+
+/*Sección About (Section)*/
+
+section .header{
+    margin-bottom: 1rem;
+    color: #273526;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 900; /*Peso de la fuente, es decir lo negrita o delgada de la fuente (revisar documentacíon)*/
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #C0CFB2;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: #45624E;
+    color: #fff;
+    border-color: #fff;
+}
+
+.features .card img{
+    max-width: 26px;
+}
