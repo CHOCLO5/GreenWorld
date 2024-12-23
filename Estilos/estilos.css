@@ -24,6 +24,11 @@ body{
     background-color: #E4E6D9;
 }
 
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 4rem 2rem;
+}
 
 /*Estilo de Nav*/
 nav{
@@ -96,12 +101,6 @@ nav{
     display: flex;
     gap: 1rem;
     align-items: center;
-}
-
-.container{
-    max-width: 1200px;
-    margin: auto;
-    padding: 5rem 2rem;
 }
 
 .blur{
@@ -253,19 +252,19 @@ section .header{
 
 .sub-header{
     max-width: 600px;
-    margin: 1.5rem auto;
+    margin: 1.25rem auto;
     text-align: center;
     color: #6D8777;
 }
 
-.pricing{
+.plants{
     margin: top 4rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:2rem;
 }
 
-.pricing .card{
+.plants .card{
     padding: 3rem 2rem;
     background-color: #273526;
     display: flex;
@@ -275,24 +274,24 @@ section .header{
     transition: all 0.3s ease;
 }
 
-.pricing .card:hover{
+.plants .card:hover{
     background-color: #C0CFB2;
     border-color: #fff;
 }
 
-.pricing .card .content{
+.plants .card .content{
     flex: 1;
     margin-bottom: 2rem;
 }
 
-.pricing .card h4{
+.plants .card h4{
     margin-top: 1rem;
     color: #fff;
     font-size: 1.2rem;
     font-weight: 500;
 }
 
-.pricing .card h3{
+.plants .card h3{
     color: #fff;
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -301,24 +300,110 @@ section .header{
     border-bottom: 2px dashed #fff;
 }
 
-.pricing .card p{
+.plants .card p{
     color: #fff;
     margin-bottom: 0.75rem;
 }
 
-.pricing .card p i{
+.plants .card p i{
     color: #ccc;
     font-size: 1.2rem;
     margin-right: 0.3rem;
 }
 
-.pricing .card button{
+.plants .card button{
     color: #fff;
     background-color: transparent;
     border: 2px solid #fff;
 }
 
-.pricing .card button:hover{
+.plants .card button:hover{
     background-color: #45624E;
     border-color: #45624E;
 }
+
+/*Footer Section*/
+footer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 400px repeat(3,1fr);
+    gap: 2rem;
+}
+
+footer .column .logo{
+    max-width: 100px;
+    margin-bottom: 2rem;
+}
+
+footer .column p{
+    color: #273526;
+    margin-bottom: 2rem;
+}
+
+footer .column .socials{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .column .socials a{
+    color: #45624E;
+    width: 40px; /* Anchura del círculo */
+    height: 40px; /* Altura igual a la anchura */    
+    border: 1px solid #273526;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+footer .column .socials a:hover{
+    color: #fff;
+    background-color: #273526;
+    border-color: #273526;
+}
+
+footer .column h4{
+    color: #fff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer .column > a{ /*Solo <a> que son hijos directos de .column. Si estan dentro de la clase son hijos directos*/
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+footer .column > a:hover{
+    color: #273526;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    color: #273526;
+    font-size: 0.8rem;
+    text-align: center;
+}
+/*
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    .header{
+        grid-template-columns: repeat(1,1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+*/
